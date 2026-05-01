@@ -38,6 +38,9 @@ class ProductController extends Controller
             ->with('success', 'Product created successfully.');
     }
 
+    public function show(product $product){
+        return view('product.show', compact('product'));
+    }
     public function edit(product $product)
     {
         return view('product.edit', compact('product'));
